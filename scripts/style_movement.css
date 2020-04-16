@@ -1,0 +1,33 @@
+* {
+		  -moz-box-sizing: border-box;
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		}
+
+		.come-in {
+			-webkit-transform: translateY(150px);
+			-webkit-animation: come-in 1s ease forwards;
+			-webkit-animation-delay: 0.2s;
+			transform: translateY(150px);
+			animation: come-in 1s ease forwards;
+			animation-delay: 0.2s;
+		}
+
+		.already-visible {
+			-webkit-transform: translateY(0);
+			-webkit-animation: none;
+			transform: translateY(0);
+			animation: none;
+		}
+
+		@-webkit-keyframes come-in {
+			to {
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes come-in {
+			to {
+				transform: translateY(0);
+			}
+		}

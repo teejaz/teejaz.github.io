@@ -3,14 +3,10 @@ body {
     font-family:monospace;
     color:Gray;
   	}
-	
+
 	#locator{
-		  width: 200px;
-		  left: 20px;
 		  text-align: justify;
-		  position: relative;
-		  
-	
+		  position: static;
 	}
 	#searchbar {
       position: absolute;
@@ -92,7 +88,74 @@ body {
   width: 400px;
   top: 200px;
   }
-  
+
+.index_img {
+  max-width: 100%;
+  height: auto;
+}
+
+.index_div {
+  /* border: solid;
+  border-width: 0.5px; */
+  text-align: center;
+  padding: 10px;
+}
+
+
+.vividworknav {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0;
+  float: left;
+  padding: 0;
+  position: relative;
+  background-color: black;
+}
+
+.vividworknav:hover img {
+  opacity: 0.3;
+}
+
+.vividworknav:hover .work-text-content {
+  opacity: 1;
+}
+
+.vividworknav img {
+  padding: 10px;
+  width: 100%;
+  display: block;
+  opacity: 1;
+  background-color: white;
+}
+
+.vividworknav img,
+.work-text-content {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.work-text-content {
+  position: absolute;
+  color: white;
+  left: 0;
+  top: 45%;
+  right: 0;
+  bottom: 0;
+  font-size: 24px;
+  text-align: center;
+  opacity: 0;
+  font-family: Oxygen;
+}
+.block-content{
+    text-align: left;
+    font-family: Oxygen;
+    padding: 8px;
+    font-size: 18px;
+  }
+
 	.tablink {
 	  background-color: #555;
 	  color: white;
