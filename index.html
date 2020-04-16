@@ -1,0 +1,80 @@
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/mystyle.css">
+
+</head>
+<body>
+		<div id="Home" class="tabcontent">
+		  <h3 class="box">Hello! My Name is Tejas</h3>
+			<p id = "locator"> I am recent graduate in Computer Engineering. My main interests is in computer hardware and software design. In my spare time, I like to work on concept art and graphic design. I enjoy programing in C++ and python.I enjoy working close to hardware and creating good looking software that runs fast, effective and provides real value to the user.
+			<li><a href="https://drive.google.com/open?id=1Q0pAxbWaDRfxjyT1YXQwV8Vh6MF2RXnY" target="_blank">MyResume</a></li>
+			<p>
+			<a href = "#"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/beb98071-aca3-4ce1-ad29-92ba672a5576/ddncha2-e040fae5-d1f2-40c9-85b2-844862c893e8.png/v1/fill/w_1192,h_670,q_70,strp/archer_by_tejas04_ddncha2-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvYmViOTgwNzEtYWNhMy00Y2UxLWFkMjktOTJiYTY3MmE1NTc2XC9kZG5jaGEyLWUwNDBmYWU1LWQxZjItNDBjOS04NWIyLTg0NDg2MmM4OTNlOC5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yqwJeeqG9y7weITtgWDhJ5jDM4eC4h6igNuKJY6AI_o" alt ="archer" id ="myimage1"></a>
+		</div>
+		
+		<div id="Contact" class="tabcontent">
+		  <h3>Contact</h3>
+		  <p>Some news this fine day!</p> 
+		</div>
+
+		<div id="Projects" class="tabcontent">
+		  <h3>Projects</h3>
+		  <p>Some of my Projects</p>
+		</div>
+
+		<div id="Links" class="tabcontent">
+		  <h3>Links</h3>
+		   <div class="Yellowtxt">
+				<p>Link to other Social Media</p>
+				  <ul>
+					<li><a href="https://github.com/teejaz"><img target="_blank"><i class="icon ion-logo-github"></i></a></li>
+					<li><a href="https://devpost.com/tjsevak" target="_blank">DEVPOST</a></li>
+					<li><a href="https://dev.to/teij04" target="_blank">DEV Community</a></li>
+					<li><a href="https://deviantart.com/tejas04" target="_blank">Deviant Art</a></li>
+				  </ul>
+				<p>CooL links and Software</p>
+				  <ul>
+					<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=35460" target="_blank">Garage Mouse</a></li>
+					<li><a href="http://www.windows93.net/"target="_blank"> Windows 93 </a></li>
+				  </ul>
+				<p>Links To Tutorials</p>
+				 <ul>
+				  <li><a href="https://www.freecodecamp.org/news/every-single-machine-learning-course-on-the-internet-ranked-by-your-reviews-3c4a7b8026c0/" target="_blank">List of 	Machine Learning Courses</a></li>
+				  <li><a href="https://www.freecodecamp.org/news/550-free-online-programming-computer-science-courses-you-can-start-in-march-d1944d6e467/"target="_blank"> 550 Free Online Programming & Computer Science Courses</a></li>
+				 <ul>
+			</div>
+		</div>
+
+	<header>
+    <nav id="navbar">
+		<button class="tablink" onclick="openPage('Home', this, 'orange')" id= "defaultOpen">Home</button>
+		<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+		<button class="tablink" onclick="openPage('Projects', this, 'orange')">Projects</button>
+		<button class="tablink" onclick="openPage('Links', this, 'orange')">Links</button>
+    </nav>
+  </header>
+</body>
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</html>

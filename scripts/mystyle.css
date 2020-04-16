@@ -1,0 +1,115 @@
+body {
+ 	background-image: url("../images/FinalRender2.png");
+    font-family:monospace;
+    color:Gray;
+  	}
+	
+	#locator{
+		  width: 200px;
+		  left: 20px;
+		  text-align: justify;
+		  position: relative;
+		  
+	
+	}
+	#searchbar {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+  	}
+	
+	#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #767676;
+  	}
+	
+	nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  	}
+	
+  	nav li {
+    display: inline;
+    margin-right: 20px;
+  	}
+	
+	h3 {
+	font-size: 40px;
+	font-weight: 500;
+	position: relative;
+	top: 15px;
+	}
+	
+	p {
+    font-size: 16px;
+  	}
+	
+  	a {
+    color: cyan;
+	text-decoration: none;
+  	}
+	
+  	a:hover {
+    color:red;
+  	}
+	
+  	section {
+    position: relative;
+  	}
+	
+  	#orange-text {
+	color: orange;
+	}
+	
+  	#orange-text:hover {
+	color: red;
+	}
+	
+  	.Yellowtxt{
+	color: yellow;
+	}
+	
+	.box {
+    border-style: none;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+	}
+	.material-icons.md-24 { font-size: 24px; }
+	.material-icons.md-light { color: rgba(255, 255, 255, 1)}
+	
+	ion-icon {
+  	font-size: 32px;
+	}
+	
+	#myimage1 {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 400px;
+  top: 200px;
+  }
+  
+	.tablink {
+	  background-color: #555;
+	  color: white;
+	  float: left;
+	  border: none;
+	  outline: none;
+	  cursor: pointer;
+	  padding: 14px 16px;
+	  font-size: 17px;
+	  width: 25%;
+	}
+	
+	.tablink:hover {
+      background-color: #777;
+    }
+	
+	.tabcontent {
+	  padding: 20px 20px;
+     }
+
