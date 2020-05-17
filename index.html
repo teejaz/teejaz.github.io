@@ -7,23 +7,30 @@
 	<link href="scripts/mystyle.css" rel="stylesheet" type="text/css">
 	<link href="scripts/style_movement.css" rel="stylesheet" type="text/css">
 	
-
-	
 </head>
+
 <body>
+	<header>
+	  <nav id="navbar">
+		<button class="tablink" onclick="openPage('Home', this, 'orange')" id= "defaultOpen">Home</button>
+		<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+		<button class="tablink" onclick="openPage('Projects', this, 'orange')">Projects</button>
+		<button class="tablink" onclick="openPage('Links', this, 'orange')">Links</button>
+	  </nav>
+</header>
 <div id="Home" class="tabcontent">
-		  <h3 class="box">Hello! My Name is Tejas</h3>
+  <h3 class="box">Hello! My Name is Tejas</h3>
 			<p id = "locator"> I am recent graduate in Computer Engineering. My main interests is in computer hardware and software design. In my spare time, I like to work on concept art and graphic design. I enjoy programing in C++ and python.I enjoy working close to hardware and creating good looking software that runs fast, effective and provides real value to the user.
 			<li><a href="https://drive.google.com/open?id=1Q0pAxbWaDRfxjyT1YXQwV8Vh6MF2RXnY" target="_blank">MyResume</a></li>
 			</p>				
 		</div>
 		
-		<div id="Contact" class="tabcontent">
+<div id="Contact" class="tabcontent">
 		  <h3>Contact</h3>
 		  <p>Some news this fine day!</p> 
 		</div>
 
-		<div id="Projects" class="tabcontent">
+<div id="Projects" class="tabcontent">
 		  <h3>Projects</h3>
 			<div class="container">
     			<div class="row">
@@ -57,7 +64,7 @@
 			</div>
 		</div>
 
-		<div id="Links" class="tabcontent">
+<div id="Links" class="tabcontent">
 		  <h3>Links</h3>
 		   <div class="Yellowtxt">
 				<p>Link to other Social Media</p>
@@ -79,15 +86,6 @@
 				 </ul>
 			</div>
 		</div>
-
-	<header>
-    <nav id="navbar">
-		<button class="tablink" onclick="openPage('Home', this, 'orange')" id= "defaultOpen">Home</button>
-		<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
-		<button class="tablink" onclick="openPage('Projects', this, 'orange')">Projects</button>
-		<button class="tablink" onclick="openPage('Links', this, 'orange')">Links</button>
-    </nav>
-  </header>
 </body>
 
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>

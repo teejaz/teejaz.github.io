@@ -8,14 +8,10 @@ body {
 		  text-align: justify;
 		  position: static;
 	}
-	#searchbar {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-  	}
+	
 	
 	#navbar {
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -173,6 +169,8 @@ body {
     }
 	
 	.tabcontent {
+	  position: relative;
 	  padding: 20px 20px;
+	  top:40px;
      }
 
