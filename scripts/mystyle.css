@@ -37,31 +37,31 @@ body {
 	
 	p {
     font-size: 16px;
-  	}
-	
-  	a {
+  }
+
+  a {
     color: cyan;
-	text-decoration: none;
-  	}
-	
-  	a:hover {
+    text-decoration: none;
+  }
+
+  a:hover {
     color:red;
-  	}
-	
-  	section {
+  }
+
+  section {
     position: relative;
-  	}
+  }
 	
-  	#orange-text {
-	color: orange;
+  #orange-text {
+	  color: orange;
 	}
 	
-  	#orange-text:hover {
-	color: red;
+  #orange-text:hover {
+	  color: red;
 	}
 	
-  	.Yellowtxt{
-	color: yellow;
+  .Yellowtxt{
+    color: yellow;
 	}
 	
 	.box {
@@ -76,101 +76,100 @@ body {
 	ion-icon {
   	font-size: 32px;
 	}
-	
-	#myimage1 {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 400px;
-  top: 200px;
+
+  .index_img {
+    max-width: 100%;
+    height: auto;
   }
 
-.index_img {
-  max-width: 100%;
-  height: auto;
-}
-
-.index_div {
-  /* border: solid;
-  border-width: 0.5px; */
-  text-align: center;
-  padding: 10px;
-}
+  .index_div {
+    /* border: solid;
+    border-width: 0.5px; */
+    text-align: center;
+    padding: 10px;
+  }
 
 
-.vividworknav {
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  float: left;
-  padding: 0;
-  position: relative;
-  background-color: black;
-}
+  .vividworknav {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 0;
+    float: left;
+    padding: 0;
+    position: relative;
+    background-color: black;
+  }
 
-.vividworknav:hover img {
-  opacity: 0.3;
-}
+  .vividworknav:hover img {
+    opacity: 0.3;
+  }
 
-.vividworknav:hover .work-text-content {
-  opacity: 1;
-}
+  .vividworknav:hover .work-text-content {
+    opacity: 1;
+  }
 
-.vividworknav img {
-  padding: 10px;
-  width: 100%;
-  display: block;
-  opacity: 1;
-  background-color: white;
-}
+  .vividworknav img {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    opacity: 1;
+    background-color: white;
+  }
 
-.vividworknav img,
-.work-text-content {
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
+  .vividworknav img,
+  .work-text-content {
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-out;
+  }
 
-.work-text-content {
-  position: absolute;
-  color: white;
-  left: 0;
-  top: 45%;
-  right: 0;
-  bottom: 0;
-  font-size: 24px;
-  text-align: center;
-  opacity: 0;
-  font-family: Oxygen;
-}
-.block-content{
+  .work-text-content {
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 45%;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0;
+    font-family: Oxygen;
+  }
+  .block-content{
     text-align: left;
     font-family: Oxygen;
     padding: 8px;
     font-size: 18px;
   }
 
-	.tablink {
-	  background-color: #555;
-	  color: white;
-	  float: left;
-	  border: none;
-	  outline: none;
-	  cursor: pointer;
-	  padding: 14px 16px;
-	  font-size: 17px;
-	  width: 25%;
-	}
-	
-	.tablink:hover {
-      background-color: #777;
-    }
-	
-	.tabcontent {
-	  position: relative;
-	  padding: 20px 20px;
-	  top:40px;
-     }
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+    
+  .tablink:hover {
+    background-color: #777;
+  }
+
+  .tabcontent {
+    position: relative;
+    padding: 20px 20px;
+    top:40px;
+  }
+  #aboutme_img{
+    max-width: 20%;
+    height: fit-content;
+    justify-content: center;
+    padding-right: 10px;
+    vertical-align: middle;
+  }
 
