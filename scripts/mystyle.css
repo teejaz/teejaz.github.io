@@ -165,11 +165,15 @@ body {
     padding: 20px 20px;
     top:40px;
   }
-  #aboutme_img{
-    max-width: 20%;
+  img.aboutme_img{
+    max-width: 100%;
     height: fit-content;
     justify-content: center;
-    padding-right: 10px;
     vertical-align: middle;
   }
+
+  .container{
+    margin-top: 100px;
+  }
+
 
