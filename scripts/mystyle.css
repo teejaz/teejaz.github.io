@@ -31,13 +31,6 @@ body {
     margin-right: 20px;
   	}
 	
-	h3 {
-	font-size: 40px;
-	font-weight: 500;
-	position: relative;
-	top: 15px;
-	}
-	
 	p {
     font-size: 16px;
   }
@@ -73,8 +66,6 @@ body {
     border-width: 5px;
     text-align: center;
 	}
-	.material-icons.md-24 { font-size: 24px; }
-	.material-icons.md-light { color: rgba(255, 255, 255, 1)}
 	
 	ion-icon {
   	font-size: 32px;
@@ -180,7 +171,10 @@ body {
   }
 
   .center{
+    display: flex;
     justify-content: center;
+    vertical-align: middle;
+    height: fit-content;
   }
 
 
