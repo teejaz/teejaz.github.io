@@ -12,7 +12,6 @@ body {
 		  position: static;
 	}
 	
-	
 	#navbar {
     position: relative;
     top: 0px;
@@ -176,5 +175,10 @@ body {
     vertical-align: middle;
     height: fit-content;
   }
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+
 
 
