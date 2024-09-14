@@ -1,10 +1,10 @@
 body {
  	background-image: url("../images/FinalRender2.png");
+  background-size: cover;
   font-family:monospace;
   color:rgb(133, 133, 133);
   background-color: #2c2828;
   background-repeat: no-repeat;
-  background-size: auto;
   }
 
 	#locator{
