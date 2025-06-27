@@ -170,6 +170,8 @@ body {
 
   .container{
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
   }
 
   .center{
@@ -178,10 +180,59 @@ body {
     vertical-align: middle;
     height: fit-content;
   }
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .tablink {
+      width: 100%; /* Full width for tab links on mobile */
+      margin-bottom: 5px; /* Space between tab links */
+    }
+
+    h1 {
+      font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    .index_div {
+      width: 100%; /* Full width for project cards on mobile */
+      margin-bottom: 20px; /* Space between cards */
+    }
+
+    .col-md-6 {
+      width: 100%; /* Stack columns on mobile */
+      margin-bottom: 15px;
+    }
+
+    .container {
+      margin-top: 50px; /* Reduce top margin on mobile */
+      padding: 0 10px; /* Add horizontal padding */
+    }
+
+    .center {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      align-items: center;
+    }
+
+    .center a {
+      width: 80%; /* Make buttons wider on mobile */
+      margin: 5px 0; /* Vertical spacing */
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tablink {
+      font-size: 14px; /* Smaller font for very small screens */
+      padding: 10px 8px;
+    }
+
+    .work-text-content {
+      font-size: 18px; /* Smaller text for project descriptions */
+    }
+
+    .center a {
+      width: 90%; /* Even wider buttons on very small screens */
+    }
+  }
+
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-
-
-
-
