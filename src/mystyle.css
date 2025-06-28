@@ -102,6 +102,12 @@ body {
     overflow: hidden;
   }
 
+  .vividworknav a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+  }
+
   .vividworknav:hover img {
     opacity: 0.3;
   }
