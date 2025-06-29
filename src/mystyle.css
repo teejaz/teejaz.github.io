@@ -198,9 +198,20 @@ body {
   }
   /* Media queries for responsive design */
   @media (max-width: 768px) {
+    #navbar {
+      display: flex;
+      flex-direction: column;
+    }
+
     .tablink {
       width: 100%; /* Full width for tab links on mobile */
-      margin-bottom: 5px; /* Space between tab links */
+      margin-bottom: 2px; /* Space between tab links */
+      float: none; /* Remove float for mobile */
+      display: block; /* Ensure block display */
+    }
+
+    .tabcontent {
+      top: 20px; /* Reduce top spacing on mobile */
     }
 
     h1 {
@@ -237,15 +248,21 @@ body {
   @media (max-width: 480px) {
     .tablink {
       font-size: 14px; /* Smaller font for very small screens */
-      padding: 10px 8px;
+      padding: 12px 8px; /* Increase padding for better touch targets */
+      width: 100%;
     }
 
     .work-text-content {
-      font-size: 18px; /* Smaller text for project descriptions */
+      font-size: 16px; /* Smaller text for project descriptions */
     }
 
     .center a {
       width: 90%; /* Even wider buttons on very small screens */
+    }
+
+    .tabcontent {
+      padding: 15px 10px; /* Reduce padding on very small screens */
+      top: 10px;
     }
   }
 
