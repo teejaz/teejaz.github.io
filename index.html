@@ -128,6 +128,13 @@
 	</div>
 </body>
 
+<style>
+	/* Hide all tab content by default */
+	.tabcontent {
+		display: none;
+	}
+</style>
+
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 <script>
 	function openPage(pageName, elmnt, color) {
@@ -144,8 +151,10 @@
 		elmnt.style.backgroundColor = color;
 	}
 
-	// Get the element with id="defaultOpen" and click on it
-	document.getElementById("defaultOpen").click();
+	// Wait for page to load, then click default tab
+	window.onload = function() {
+		document.getElementById("defaultOpen").click();
+	};
 </script>
 
 </html>
