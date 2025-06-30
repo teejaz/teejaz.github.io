@@ -1,11 +1,16 @@
 body {
- 	background-image: url("../images/FinalRender2.png");
+  background-image: 
+    linear-gradient(rgba(44, 40, 40, 0.7), rgba(44, 40, 40, 0.7)),
+    url("../images/FinalRender2.png");
   background-size: cover;
-  font-family:monospace;
-  color:rgb(133, 133, 133);
+  background-position: center;
+  background-attachment: fixed;
+  font-family: monospace;
+  color: rgb(200, 200, 200);
   background-color: #2c2828;
   background-repeat: no-repeat;
-  }
+  min-height: 100vh;
+}
 
 	#locator{
 		  text-align: justify;
@@ -92,9 +97,15 @@ body {
     text-align: center;
     padding: 0;
     float: left;
-    padding: 0;
     position: relative;
     background-color: black;
+    overflow: hidden;
+  }
+
+  .vividworknav a {
+    display: block;
+    position: relative;
+    text-decoration: none;
   }
 
   .vividworknav:hover img {
@@ -108,6 +119,7 @@ body {
   .vividworknav img {
     padding: 10px;
     width: 100%;
+    height: auto;
     display: block;
     opacity: 1;
     background-color: white;
@@ -124,14 +136,18 @@ body {
   .work-text-content {
     position: absolute;
     color: white;
-    left: 0;
-    top: 90%;
-    right: 0;
-    bottom: 0;
-    font-size: 24px;
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
     text-align: center;
     opacity: 0;
     font-family: Oxygen;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    pointer-events: none;
   }
   .block-content{
     text-align: left;
@@ -170,6 +186,8 @@ body {
 
   .container{
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
   }
 
   .center{
@@ -178,10 +196,59 @@ body {
     vertical-align: middle;
     height: fit-content;
   }
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .tablink {
+      width: 100%; /* Full width for tab links on mobile */
+      margin-bottom: 5px; /* Space between tab links */
+    }
+
+    h1 {
+      font-size: 24px; /* Smaller heading size for mobile */
+    }
+
+    .index_div {
+      width: 100%; /* Full width for project cards on mobile */
+      margin-bottom: 20px; /* Space between cards */
+    }
+
+    .col-md-6 {
+      width: 100%; /* Stack columns on mobile */
+      margin-bottom: 15px;
+    }
+
+    .container {
+      margin-top: 50px; /* Reduce top margin on mobile */
+      padding: 0 10px; /* Add horizontal padding */
+    }
+
+    .center {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      align-items: center;
+    }
+
+    .center a {
+      width: 80%; /* Make buttons wider on mobile */
+      margin: 5px 0; /* Vertical spacing */
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tablink {
+      font-size: 14px; /* Smaller font for very small screens */
+      padding: 10px 8px;
+    }
+
+    .work-text-content {
+      font-size: 18px; /* Smaller text for project descriptions */
+    }
+
+    .center a {
+      width: 90%; /* Even wider buttons on very small screens */
+    }
+  }
+
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
-
-
-
-
