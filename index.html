@@ -1,155 +1,459 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="dist/styles.css" rel="stylesheet">
-	<link href="dist/style_movement.css" rel="stylesheet">
-	<link href="src/mystyle.css" rel="stylesheet" type="text/css">
-	<link href="src/style_movement.css" rel="stylesheet" type="text/css">
-	<script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas Sevak - Systems Engineer & 3D Artist</title>
+    <meta name="description" content="Portfolio of Tejas Sevak - Creative Systems Engineer & 3D Artist">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="dist/styles.css" rel="stylesheet">
+    <link href="src/mystyle.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                            600: '#475569',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
 
-<body>
-	<header>
-		<nav id="navbar">
-			<button class="tablink" onclick="openPage('Home', this, 'orange')" id="defaultOpen">Home</button>
-			<button class="tablink" onclick="openPage('Projects', this, 'orange')">Projects</button>
-			<button class="tablink" onclick="openPage('Links', this, 'orange')">Links</button>
-			<button class="tablink" onclick="openPage('3d Projects', this, 'orange')">3d Projects</button>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 min-h-screen transition-colors duration-300">
+    <!-- Navigation -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="#" class="text-2xl font-heading font-bold text-primary-600 dark:text-primary-400">Tejas<span class="text-gray-900 dark:text-white">Sevak</span></a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Home</a>
+                        <a href="#projects" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Projects</a>
+                        <a href="#art" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">3D Art</a>
+                        <a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Contact</a>
+                        
+                        <!-- Theme Toggle -->
+                        <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                            <ion-icon name="moon" class="text-gray-700 dark:text-yellow-300 text-xl dark:hidden"></ion-icon>
+                            <ion-icon name="sunny" class="text-yellow-400 text-xl hidden dark:block"></ion-icon>
+                        </button>
+                        
+                        <!-- Resume Button -->
+                        <a href="https://docs.google.com/document/d/19W8tmQYSKFBBR0TqG2jiDRXS8tdbdTzu/edit?usp=sharing&ouid=106539344878091529941&rtpof=true&sd=true" 
+                           target="_blank" 
+                           class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-300">
+                            Resume
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                    <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                    <a href="#art" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">3D Art</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="text-gray-700 dark:text-gray-200">Dark Mode</span>
+                        <button id="mobile-theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <ion-icon name="moon" class="text-gray-700 dark:text-yellow-300 text-xl dark:hidden"></ion-icon>
+                            <ion-icon name="sunny" class="text-yellow-400 text-xl hidden dark:block"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-		</nav>
-	</header>
+<section id="home" class="pt-24 pb-16 bg-gray-50 dark:bg-gray-900 text-center">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Hey there! I'm Tejas
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+            A creative systems engineer passionate about building solutions that automate, teach, and inspire.
+        </p>
 
+        <div class="flex justify-center gap-4 mb-12">
+            <a href="https://www.linkedin.com/in/tejas-sevak99/" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+                LinkedIn
+            </a>
+            <a href="https://github.com/teejaz" class="px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-800 transition">
+                GitHub
+            </a>
+        </div>
 
-	<div id="Home" class="tabcontent">
-		<h1 class="text-2xl font-mono text-center">Hey there! I'm Tejas, a creative systems engineer passionate about building hardware and software solutions that automate tasks, teach new things, and inspire others.</h1>
-		<div class="center">
-			<div class="mt-8 max-w-max">
-				<a class="text-black px-6 py-4 bg-[#096c77] rounded font-bold text-base sm:text-lg inline-block mb-3 mx-1"
-					href="https://www.linkedin.com/in/tejas-sevak99/">Linkedin</a>
-				<a class="text-black px-6 py-4 bg-[#096c77] rounded font-bold text-base sm:text-lg inline-block mb-3 mx-1"
-					href="https://github.com/teejaz">Github</a>
-				<a class="text-black px-6 py-4 bg-[#096c77] rounded font-bold text-base sm:text-lg inline-block mb-3 mx-1"
-					href="#">Blog</a>
-				<a class="text-black px-6 py-4 bg-[#096c77] rounded font-bold text-base sm:text-lg inline-block mb-3 mx-1"
-					href="https://docs.google.com/document/d/19W8tmQYSKFBBR0TqG2jiDRXS8tdbdTzu/edit?usp=sharing&ouid=106539344878091529941&rtpof=true&sd=true">Resume</a>
+        <!-- Profile Images -->
+        <div class="profile-images">
+            <div class="profile-image-container">
+                <img src="images/bridge.jpg" alt="Bridge Project" class="profile-image">
+            </div>
+            <div class="profile-image-container">
+                <img src="images/on the clif.jpg" alt="Cliff Project" class="profile-image">
+            </div>
+            <div class="profile-image-container">
+                <img src="images/sunset1.jpg" alt="Sunset Project" class="profile-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- Projects Section -->
+<section id="projects" class="py-16 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+        <!-- Title -->
+        <div class="text-center mb-12">
+            <span class="section-title text-lg font-medium">PORTFOLIO</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="masonry-grid">
+            <!-- Project 1 -->
+            <div class="project-card group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+				<a href="https://github.com/teejaz/Image_painter" target="_blank" class="relative block overflow-hidden h-64 cursor-pointer">
+					<img src="images/TensorFlow.png" alt="AI Painter" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+					<div>
+						<div class="flex flex-wrap gap-2 mb-3">
+						<span class="px-3 py-1 bg-blue-600/20 text-blue-100 text-xs rounded-full">Python</span>
+						<span class="px-3 py-1 bg-purple-600/20 text-purple-100 text-xs rounded-full">TensorFlow</span>
+						<span class="px-3 py-1 bg-green-600/20 text-green-100 text-xs rounded-full">AI/ML</span>
+						</div>
+						<span class="inline-flex items-center text-sm text-white font-medium">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></span>
+					</div>
+					</div>
+				</a>
+				<div class="project-content">
+					<h3>AI Image Painter</h3>
+					<p>Transforms photos into artistic paintings using TensorFlow and neural networks.</p>
+					<div class="flex justify-between items-center mt-4">
+					<a href="https://github.com/teejaz/Image_painter" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+						<i class="fab fa-github mr-2"></i> Source Code
+					</a>
+					<span class="text-xs text-gray-500 dark:text-gray-400">Updated: 2023</span>
+					</div>
+				</div>
+			</div>
+
+            <!-- Project 2 - Add more projects following the same structure -->
+            <div class="project-card group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+				<a href="https://devpost.com/software/smart-parking-system-dwkiq3" target="_blank" class="relative block overflow-hidden h-64 cursor-pointer">
+					<img src="images/gallery.jpg" alt="Smart Parking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+						<div>
+							<div class="flex flex-wrap gap-2 mb-3">
+								<span class="px-3 py-1 bg-blue-600/20 text-blue-100 text-xs rounded-full">IoT</span>
+								<span class="px-3 py-1 bg-amber-600/20 text-amber-100 text-xs rounded-full">Hardware</span>
+								<span class="px-3 py-1 bg-green-600/20 text-green-100 text-xs rounded-full">Arduino</span>
+							</div>
+							<span class="inline-flex items-center text-sm text-white font-medium">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></span>
+						</div>
+					</div>
+    			</a>
+    		<div class="project-content">
+			<h3>Smart Parking System</h3>
+			<p>IoT-based solution for efficient parking space management using sensors and cloud connectivity.</p>
+			<div class="flex justify-between items-center mt-4">
+				<a href="https://devpost.com/software/smart-parking-system-dwkiq3" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+					<i class="fas fa-external-link-alt mr-2"></i> Live Demo
+				</a>
+				<span class="text-xs text-gray-500 dark:text-gray-400">Hackathon Project</span>
+			</div>
+			</div>
+			</div>
+
+			<!-- Project 3 -->
+		<div class="project-card group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+			<a href="https://github.com/teejaz/Projects_Java" target="_blank" class="relative block overflow-hidden h-64 cursor-pointer">
+				<img src="images/Blog.JPG" alt="Personal Blog" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+				<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+					<div>
+						<div class="flex flex-wrap gap-2 mb-3">
+							<span class="px-3 py-1 bg-red-600/20 text-red-100 text-xs rounded-full">Java</span>
+						</div>
+						<span class="inline-flex items-center text-sm text-white font-medium">View Project <i class="fas fa-arrow-right ml-2 text-xs"></i></span>
+					</div>
+				</div>
+			</a>
+			<div class="project-content">
+				<h3>Personal Blog</h3>
+				<p>A personal blog platform built with Java.</p>
+				<div class="flex justify-between items-center mt-4">
+					<a href="https://github.com/teejaz/Projects_Java" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+						<i class="fab fa-github mr-2"></i> Source Code
+					</a>
+					<span class="text-xs text-gray-500 dark:text-gray-400">Personal Project</span>
+				</div>
 			</div>
 		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<img src="images/bridge.jpg" class="aboutme_img">
-				</div>
-
-				<div class="col">
-					<img src="images/on the clif.jpg" class="aboutme_img">
-				</div>
-
-				<div class="col">
-					<img src="images/sunset1.jpg" class="aboutme_img">
-				</div>
-			</div>
 		</div>
 	</div>
+</section>
 
-	<div id="Links" class="tabcontent">
-		<h3>Links</h3>
-		<p>Some news this fine day!</p>
-	</div>
+		    <!-- 3D Projects Section -->
+    <section id="art" class="py-20 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <span class="text-primary-600 dark:text-primary-400 font-medium">Creative Work</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mt-2 mb-4">3D Art & Visualizations</h2>
+                <div class="w-20 h-1 bg-primary-600 dark:bg-primary-400 mx-auto mb-12"></div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-medium transition-all" data-filter="all">
+                        All Works
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-all" data-filter="character">
+                        Characters
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-all" data-filter="environment">
+                        Environments
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 text-sm font-medium transition-all" data-filter="simulation">
+                        Simulations
+                    </button>
+                </div>
+            </div>
 
-	<div id="Projects" class="tabcontent">
-		<h3>Projects</h3>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="row">
-						
-						<div class="col-md-6 index_div module already-visible come-in">
-							<div class="vividworknav">
-								<a href="https://github.com/teejaz/AITensorFlow">
-									<img src="images/TensorFlow.png" class="index_img" alt="" />
-									<div class="work-text-content">
-										<p>Image Painting with TensorFlow</p>
-									</div>
-								</a>
-							</div>
-						</div>
+            <!-- Masonry Grid -->
+            <div class="masonry-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="masonry-item group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500" data-category="character">
+                    <img src="images/ART/myarcher.jpg" alt="3D Character - Archer" class="w-full h-auto transform transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="inline-block px-3 py-1 bg-primary-600 text-white text-xs rounded-full mb-2">Character Design</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Mystic Archer</h3>
+                            <p class="text-gray-300 text-sm mb-4">A high-poly 3D character model with detailed textures and rigging for animation.</p>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-gray-300">Blender, Substance Painter</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="images/ART/myarcher.jpg" class="glightbox absolute inset-0" data-gallery="3d-gallery"></a>
+                </div>
 
-						<div class="col-md-6 index_div module already-visible come-in">
-							<div class="vividworknav">
-								<a href="https://devpost.com/software/smart-parking-system-dwkiq3">
-									<img src="images/gallery.jpg" alt="" />
-									<div class="work-text-content">
-										<p>CarParking</p>
-									</div>
-								</a>
-							</div>
-						</div>
+                <!-- Project 2 -->
+                <div class="masonry-item group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500" data-category="simulation">
+                    <img src="images/ART/waterSimulation.gif" alt="Water Simulation" class="w-full h-auto transform transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                        <div class="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded-full mb-2">Fluid Simulation</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Ocean Wave Simulation</h3>
+                            <p class="text-gray-300 text-sm mb-4">Realistic water surface simulation with dynamic wave patterns and lighting.</p>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-xs text-gray-300">Houdini, Redshift</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="images/ART/waterSimulation.gif" class="glightbox absolute inset-0" data-gallery="3d-gallery"></a>
+                </div>
 
-						<div class="col-md-6 index_div module already-visible come-in">
-							<div class="vividworknav">
-								<a href="https://github.com/teejaz/Projects_Java">
-									<img src="images/Blog.JPG" alt="" />
-									<div class="work-text-content">
-										<p>Personal blog platform built with Java</p>
-									</div>
-								</a>
-							</div>
-						</div>
+                
 
-						<div class="col-md-6 index_div module already-visible come-in">
-							<div class="vividworknav">
-								<a href="https://github.com/teejaz/planet_sim_1">
-									<img src="images/Planet_simulation_inner_orbit.png" alt="" />
-									<div class="work-text-content">
-										<p>Interactive planetary system simulation</p>
-									</div>
-								</a>
-							</div>
-						</div>
 
-							</div>
-						</div>
+            </div>
+
+            <!-- View More Button -->
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 rounded-lg font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 group">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+	<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 scroll-mt-24">
+		<div class="container mx-auto px-6 lg:px-12">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white">Contact</h2>
+				<div class="w-20 h-1 bg-primary-600 dark:bg-primary-400 mx-auto mt-4"></div>
+			</div>
+			<div class="max-w-2xl mx-auto text-center space-y-4">
+				<p class="text-gray-600 dark:text-gray-300">Feel free to reach out for collaborations or opportunities.</p>
+					<div class="flex justify-center gap-4">
+						<a href="mailto:teejassevak@gmail.com" class="px-5 py-3 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition">Email Me</a>
+						<a href="https://www.linkedin.com/in/tejas-sevak99/" target="_blank" class="px-5 py-3 rounded-lg border border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition">LinkedIn</a>
 					</div>
-				</div>
 			</div>
 		</div>
+	</section>
 
-		<div id="3d Projects" class="tabcontent">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<img src="images/ART/myarcher.jpg" class="aboutme_img" /></a>
-					</div>
-					<div class="col-md-6">
-						<img src="images/ART/waterSimulation.gif" class="aboutme_img" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Initialize GLightbox
+        const lightbox = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.masonry-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active state
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-600', 'dark:text-primary-400'));
+                    button.classList.add('active', 'bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-600', 'dark:text-primary-400');
+                    
+                    // Filter items
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    items.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.project-card');
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if(elementPosition < screenPosition) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Initialize animations
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', () => {
+        // Initial check in case elements are already in view
+        animateOnScroll();
+        
+        // Add a small delay to ensure DOM is fully loaded
+        setTimeout(animateOnScroll, 500);
+    });
+
+    // Add hover effect for project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const angleX = (y - centerY) / 20;
+            const angleY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    });
+</script>
 
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 <script>
-	function openPage(pageName, elmnt, color) {
-		var i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablink");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].style.backgroundColor = "";
-		}
-		document.getElementById(pageName).style.display = "block";
-		elmnt.style.backgroundColor = color;
-	}
 
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
