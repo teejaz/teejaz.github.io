@@ -118,7 +118,6 @@ The portfolio is fully responsive and optimized for:
 
 - **LinkedIn**: [Tejas Sevak](https://www.linkedin.com/in/tejas-sevak99/)
 - **GitHub**: [teejaz](https://github.com/teejaz)
-- **Resume**: [View Resume](https://docs.google.com/document/d/19W8tmQYSKFBBR0TqG2jiDRXS8tdbdTzu/edit?usp=sharing&ouid=106539344878091529941&rtpof=true&sd=true)
 
 ## 📄 License
 
